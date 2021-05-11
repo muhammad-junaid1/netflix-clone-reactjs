@@ -31,12 +31,12 @@ const App = () => {
       <Nav genres={genres} />
       <Switch>
         <Route path="/" exact component={Homepage} />
-        <Route path="/genre/:genreId" component={GenrePage} />
-        <Route path="/trending" component={TrendingMovies} />
-        <Route path="/popular" component={PopularMovies} />
-        <Route path="/rated" component={RatedMovies} />
-        <Route path="/movie/:movieId" component={SingleMovie} />
-        <Route path="/search" component={SearchPage} />
+        <Route path="/genre/:genreId" exact component={GenrePage} />
+        <Route path="/trending" exact component={TrendingMovies} />
+        <Route path="/popular" exact component={PopularMovies} />
+        <Route path="/rated" exact component={RatedMovies} />
+        <Route path="/movie/:movieId" exact component={SingleMovie} />
+        <Route path="/search" exact component={SearchPage} />
         <Route component={Error404} />
       </Switch>
       <Footer />
