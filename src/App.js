@@ -8,7 +8,8 @@ import TrendingMovies from "./components/TrendingMovies";
 import PopularMovies from "./components/PopularMovies";
 import RatedMovies from "./components/RatedMovies";
 import SingleMovie from "./components/SingleMovie";
-import SearchPage from "./components/SearchPage"
+import Error404 from "./components/Error404";
+import SearchPage from "./components/SearchPage";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -35,7 +36,8 @@ const App = () => {
         <Route path="/popular" component={PopularMovies} />
         <Route path="/rated" component={RatedMovies} />
         <Route path="/movie/:movieId" component={SingleMovie} />
-        <Route path="/search" component={SearchPage}/>
+        <Route path="/search" component={SearchPage} />
+        <Route component={Error404} />
       </Switch>
       <Footer />
     </>
