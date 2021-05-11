@@ -38,7 +38,7 @@ const MoviesGallery = ({ heading, call, param, endPoint, isSearchPage }) => {
           setGalleryHeading(`Search results for "${param}"`);
         }
       }
-      if (movies.total_pages !== 0 || movies.results.length === 0) {
+      if (movies.total_pages !== 0 || movies.results.length !== 0) {
         if (pageNo > movies.total_pages) {
           setRedirect(true);
         }
