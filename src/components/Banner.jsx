@@ -21,7 +21,9 @@ const Banner = ({ backDrop, bannerMovie, cast }) => {
   }
   useEffect(() => {
     const trailerKey = bannerMovie.videos.results.length > 0 ? bannerMovie.videos.results.find(trailer => trailer.site === "YouTube") : "";
-    setTrailer(trailerKey.key);
+    if(trailerKey) {
+      setTrailer(trailerKey.key);
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
