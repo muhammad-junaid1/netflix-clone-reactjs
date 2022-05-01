@@ -119,9 +119,16 @@ body {
   color: #ccc;
 }
 
-.navbar .navbar-content-right img {
+.navbar .user-account img {
   width: 30px;
-  margin: 0 10px 0 40px;
+  margin-right: 10px;
+}
+
+.navbar .user-account {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  font-family: inherit;
 }
 
 /******************* Banner Styles ******************/
@@ -244,7 +251,7 @@ body {
 }
 
 .movies-row-images {
-  padding: 15px;
+  padding-top: 15px;
 }
 .movies-row-images::-webkit-scrollbar {
   display: none;
@@ -362,8 +369,6 @@ body {
   color: var(--main-color);
 }
 
-
-
 /* *************  Extra styles *************** */
 
 .slick-prev {
@@ -374,7 +379,121 @@ body {
   right: -50px !important;
 }
 
-.slick-prev::before, .slick-next::before {
+.slick-prev::before,
+.slick-next::before {
   color: #ff000d;
   font-size: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .navbar .navbar-content-left .logo img {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .navbar .genres-dropdown {
+    position: absolute !important;
+    right: 10px;
+    top: 70px;
+    background: #ff000d;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .genres-dropdown .dropdown {
+    left: -200px;
+    margin-top: 10px !important;
+  }
+
+  .navbar-content-right svg {
+    display: none;
+  }
+
+  .banner-content-wrapper,
+  .banner-content {
+    width: 100% !important;
+  }
+
+  .banner-content {
+    padding-left: 25px;
+  }
+
+  .navbar .user-account {
+    margin-left: 0px;
+  }
+
+  .navbar .user-account p {
+    display: none !important;
+  }
+
+  .navbar .user-account img {
+    margin-right: 0;
+  }
+
+  .navbar-content-right form {
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .navbar-content-right form input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .navbar .navbar-content-left .dropdown a {
+    padding: 8px 0;
+  }
+
+  .navbar-content-left {
+    width: auto;
+  }
+
+  .navbar-content-right {
+    width: 100%;
+  }
+
+  .banner-content .cast {
+    width: 80%;
+  }
+  .movies-images img {
+    margin: 0;
+  }
+
+  .movies-content {
+    width: 90%;
+  }
+
+  .movies-images {
+    row-gap: 20px;
+    justify-content: center;
+  }
+
+  .movies-images a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .movies-images a img {
+    width: 260px;
+  }
+  .movies-content-header {
+    margin-bottom: 40px;
+    margin-top: 25px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .movies-content-header h1 {
+    margin-bottom: 15px;
+  }
+
+  .banner-wrapper {
+    height: 120vh;
+  }
+
+  .trailer-popup-video iframe {
+    width: 100%;
+    height: 60vh;
+  }
+  .popup-cross-icon {
+    right: 0;
+  }
 }

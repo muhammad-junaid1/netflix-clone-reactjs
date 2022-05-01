@@ -67,8 +67,10 @@ const Nav = ({ genres }) => {
           <form autoComplete="off" action="/search">
             <input type="text" placeholder="Search" name="term" />
           </form>
+          <div class="user-account">
           <img src={Avatar} alt="" />
           <p>Junaid</p>
+          </div>
         </div>
       </div>
     </div>

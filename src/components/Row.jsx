@@ -23,6 +23,14 @@ const Row = ({ heading, movies, seeAllLinkPath }) => {
               variableWidth={true}
               draggable={false}
               autoPlay={false}
+              responsive={[
+                {
+                  breakpoint: 767,
+                  settings: {
+                    arrows: false,
+                  },
+                },
+              ]}
             >
           {movies.map((movie) => {
             return (
