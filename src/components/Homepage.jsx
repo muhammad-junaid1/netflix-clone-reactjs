@@ -47,6 +47,8 @@ const Homepage = () => {
         calls.fetchCast(`${movie.id}`),
         calls.fetchGenres(),
       ]);
+    
+      setLoading(false);
 
       // Fetch all movies with all genres and set to the state
       const movies = await Promise.all(
@@ -62,7 +64,6 @@ const Homepage = () => {
       });
 
       // Set all the states
-      setLoading(false);
       setGenreMoviesList(genreData);
       setPopularMovies(popularMoviesList.results.slice(0, 10));
       setTrendingMovies(trendingMoviesList.results.slice(0, 10));

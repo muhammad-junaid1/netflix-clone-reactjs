@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Row = ({ heading, movies, seeAllLinkPath }) => {
   return (
@@ -12,6 +15,15 @@ const Row = ({ heading, movies, seeAllLinkPath }) => {
           </span>
         </div>
         <div className="movies-row-images">
+        <Slider
+              dots={false}
+              arrows={true}
+              infinite={true}
+              slidesToScroll={1}
+              variableWidth={true}
+              draggable={false}
+              autoPlay={false}
+            >
           {movies.map((movie) => {
             return (
               <Link to={`/movie/${movie.id}`}>
@@ -23,6 +35,7 @@ const Row = ({ heading, movies, seeAllLinkPath }) => {
               </Link>
             );
           })}
+          </Slider>
         </div>
       </div>
     </>

@@ -19,6 +19,7 @@ const MoviesGallery = ({ heading, call, param, endPoint, isSearchPage }) => {
 
   useEffect(() => {
     fetchData();
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [param, pageNo]);
 
@@ -69,7 +70,6 @@ const MoviesGallery = ({ heading, call, param, endPoint, isSearchPage }) => {
       } else {
         setAllMovies(movies.results);
       }
-      setLoading(false);
     } catch (error) {
       console.log(error);
     }

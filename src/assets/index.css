@@ -244,10 +244,7 @@ body {
 }
 
 .movies-row-images {
-  display: flex;
-  overflow: scroll;
   padding: 15px;
-  align-items: center;
 }
 .movies-row-images::-webkit-scrollbar {
   display: none;
@@ -363,4 +360,21 @@ body {
 .error-404-wrapper h1 {
   font-size: 100px;
   color: var(--main-color);
+}
+
+
+
+/* *************  Extra styles *************** */
+
+.slick-prev {
+  left: -50px !important;
+}
+
+.slick-next {
+  right: -50px !important;
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #ff000d;
+  font-size: 30px;
 }
